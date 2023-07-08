@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hakkımda</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body style="padding-top: 300px;">
+    
+    <div style="position: absolute; top: 300px; left: 550px; right: 50px;">
+        <a href="{% static 'mvt/images/kaancv.png' %}" target="_blank">
+            <img src="{% static 'mvt/images/kaancv.png' %}" alt="Banner Resmi" width="600" height="700">
+    
+        </a>
+    </div>
+</body>
+</html>
+{% endblock %}

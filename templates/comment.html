@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">Yorumlar</h1>
+                <hr>
+                {% for comment in comments %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ comment.user.username }}</h5>
+                            <p class="card-text">{{ comment.text }}</p>
+                            <small class="text-muted">{{ comment.date }}</small>
+                            {% if user.is_superuser %}
+                                <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger">Yorumu Sil</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% empty %}
+                    <p class="text-center">Henüz yorum yok.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto p-2" style="width: 400px;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <hr>
+                <h2 class="text-center">Yorum Yap</h2>
+                <form method="POST" action="{% url 'save_comment' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="comment">Yorumunuzu buraya girin:</label>
+                        <textarea name="comment" id="comment" rows="4" required class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Yorum Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

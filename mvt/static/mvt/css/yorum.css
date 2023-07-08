@@ -1,0 +1,70 @@
+.container {
+  margin-top: 50px;
+}
+
+.comments {
+  margin-bottom: 20px;
+}
+
+.comment {
+  background-color: #f8f9fa;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text-muted {
+  font-size: 12px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form label {
+  font-weight: bold;
+}
+
+.comment-form textarea {
+  resize: none;
+}
+
+.comment-placeholder {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #999;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.comment-form textarea:focus + .comment-placeholder {
+  opacity: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center p {
+  margin-bottom: 20px;
+}

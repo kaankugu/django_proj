@@ -1,0 +1,22 @@
+.yan-banner {
+    width: 200px;
+    height: 400px;
+    background-color: #f2f2f2;
+    /* Diğer stil özellikleri */
+}
+.yan-banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.yan-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.yan-banner h1 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 10px;
+}
